@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using BlabberApp.Domain;
 
 namespace BlabberApp.DataStore
 {
     public class InMemory: IUserEntityDataStore
     {
+        public InMemory() {}
+        public InMemory(ICollection c) {}
         public bool Create(UserEntity userEntity){return true;}
         public bool Delete(UserEntity userEntity){return true;}
         public bool DeleteByID(string ID){return true;}
