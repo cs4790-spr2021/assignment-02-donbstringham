@@ -1,12 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BlabberApp.DataStore;
 
 namespace BlabberApp.DataStoreTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UserEntityTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod()
         {
         }
     }

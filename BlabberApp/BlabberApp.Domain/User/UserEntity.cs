@@ -3,11 +3,12 @@ using System.Net.Mail;
 
 namespace BlabberApp.Domain
 {
-    public class User
+    public class UserEntity
     {
         private string _ID;
+        private string _name {get; set;}
 
-        public User setID(string newID)
+        public UserEntity setID(string newID)
         {
             try
             {

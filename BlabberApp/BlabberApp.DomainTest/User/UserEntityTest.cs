@@ -5,13 +5,13 @@ using BlabberApp.Domain;
 namespace BlabberApp.DomainTest
 {
     [TestClass]
-    public class UserTest
+    public class UserEntityTest
     {
         [TestMethod]
         public void TestInvalidID()
         {
             // arrange
-            var harness = new User();
+            var harness = new UserEntity();
             var expected = "foobar";
             // act assert
             Assert.ThrowsException<FormatException>(() => harness.setID(expected));
