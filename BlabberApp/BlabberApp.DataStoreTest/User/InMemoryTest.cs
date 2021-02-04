@@ -38,9 +38,10 @@ namespace BlabberApp.DataStoreTest
             UserEntity[] users = {
                 new UserEntity(),
                 new UserEntity(),
+                new UserEntity(),
                 new UserEntity()
             };
-            var expected = 3;
+            var expected = 4;
             // act
             var fixture = new InMemory(users);
             var actual = fixture.Count();
