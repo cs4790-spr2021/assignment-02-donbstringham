@@ -6,9 +6,9 @@ namespace BlabberApp.Domain
     public class UserEntity
     {
         private string _ID;
-        private string _name {get; set;}
+        public string Name {get; set;}
 
-        public UserEntity setID(string newID)
+        public UserEntity SetId(string newID)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace BlabberApp.Domain
             _ID = newID;
             return this;
         }
-        public string getID()
+        public string GetId()
         {
             return _ID;
         }

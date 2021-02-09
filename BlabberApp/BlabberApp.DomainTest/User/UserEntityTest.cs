@@ -14,7 +14,7 @@ namespace BlabberApp.DomainTest
             var harness = new UserEntity();
             var expected = "foobar";
             // act assert
-            Assert.ThrowsException<FormatException>(() => harness.setID(expected));
+            Assert.ThrowsException<FormatException>(() => harness.SetId(expected));
         }
     }
 }
