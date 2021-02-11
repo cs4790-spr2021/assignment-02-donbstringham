@@ -3,7 +3,7 @@ using BlabberApp.Domain;
 
 namespace BlabberApp.DataStore
 {
-    public class InMemory : IDomainDataStore, IDomainServices 
+    public class InMemory : IDomainDataStore, IDomainServices
     {
         private List<IDomain> MyBuffer;
 
