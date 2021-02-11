@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace BlabberApp.Domain
 {
-    public class UserEntity
+    public class UserEntity : IDomain
     {
         private string _ID;
         public string Name {get; set;}

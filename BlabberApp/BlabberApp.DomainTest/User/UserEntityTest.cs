@@ -16,5 +16,16 @@ namespace BlabberApp.DomainTest
             // act assert
             Assert.ThrowsException<FormatException>(() => harness.SetId(expected));
         }
+        [TestMethod]
+        public void TestValidID()
+        {
+            // arrange
+            var harness = new UserEntity();
+            var expected = "me@example.com";
+            // act
+            harness.SetId("me@example.com");
+            // assert
+            Assert.AreEqual(expected, harness.GetId());
+        }
     }
 }

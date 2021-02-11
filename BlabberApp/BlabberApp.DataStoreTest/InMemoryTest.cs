@@ -6,7 +6,7 @@ using BlabberApp.Domain;
 namespace BlabberApp.DataStoreTest
 {
     [TestClass]
-    public class UserEntityTest
+    public class InMemoryTest
     {
         [TestMethod]
         public void TestCanary()
@@ -30,6 +30,7 @@ namespace BlabberApp.DataStoreTest
             var actual = new InMemory();
             // act
             actual.Add(new UserEntity());
+            actual.Add(new BlabEntity());
             // assert
             Assert.AreNotEqual(expected.Count(), actual.Count());
         }
@@ -156,8 +157,9 @@ namespace BlabberApp.DataStoreTest
             // act
             fixture.Create(expected);
             fixture.Update(actual);
+            actual = (UserEntity)fixture.Find("foobar@usa.us");
             // assert
-            Assert.AreEqual("Willy Wonka", fixture.Find("foobar@usa.us").Name);
+            Assert.AreEqual("Willy Wonka", actual.Name);
         }
 
         [TestMethod]
